@@ -12,7 +12,6 @@ expdata <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, de
 Sub_expData <- data[expdata$Date %in% c("1/2/2007","2/2/2007") ,]
 
 #Plot2 of subset data
-#str(subSetData)
 datetime <- strptime(paste(Sub_expData$Date, Sub_expData$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 glb_Act_Power1 <- as.numeric(Sub_expData$Global_active_power)
 png("plot2.png", width=480, height=480)
